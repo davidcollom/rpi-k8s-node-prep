@@ -13,6 +13,8 @@ if uname -a | grep hypriot; then
 os_type=hypriot
 elif uname -a | grep raspbian; then
 os_type=raspbian
+elif id pi > /dev/null; then
+os_type=raspbian
 fi
 
 if [[ "$os_type" == "raspbian" ]]; then
